@@ -1,17 +1,19 @@
-package Abstract.ust;
+package Interface.ust;
 
-interface Vehicle{
-	public abstract String getColor();
-	public abstract String getEngineType();
-	public static final int x=4;
+interface Language{
+	void getName(String name);
+	
+}
+class ProgrammingLanguage implements Language{
+	public void getName(String name) {
+		System.out.println("Programming Language:"+name);
+	}
 }
 
-abstract public class Interface_Example implements Vehicle{
-	public String getColor() {
-		return "Green";
+
+public class Interface_Example {
+	public static void main(String args[]) {
+		ProgrammingLanguage language=new ProgrammingLanguage();
+		language.getName("Java");
 	}
-/** public String getEngineType() {
-		return "Manual";
-	}
-*/
 }
