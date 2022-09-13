@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 public class File_Inputstream2 {
 	public static void main(String args[]) {
 		try {
-			FileInputStream input=new FileInputStream("input.txt");
+			FileInputStream input=new FileInputStream("C:\\Users\\ustjavafsdb220\\input.txt");
 			System.out.println("Data in the file:");
 			int i=input.read();
 			while(i!=-1) {
