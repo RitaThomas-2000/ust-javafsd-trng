@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 public class File_Buffered5 {
 	public static void main(String args[]) {
 		try {
-			FileInputStream file=new FileInputStream("input.txt");
+			FileInputStream file=new FileInputStream("C:\\Users\\ustjavafsdb220\\input.txt");
 			BufferedInputStream input=new BufferedInputStream(file);
 			int i=input.read();
 			while(i!=-1) {
