@@ -1,16 +1,16 @@
-package hello.ust;
+package enumeration.ust;
+
+import java.util.*;
 
 public class Demo {
 	public static void main(String args[]) {
-		DemoClass demo=new DemoClass();
-		demo.<String>genericsMethod("Java Programming");
-		demo.<Integer>genericsMethod(25);
+		HashSet<String> hs=new HashSet<String>();
+		hs.add("P");
+		hs.add("Q");
+		hs.add("R");
+		
+		Enumeration e=Collections.enumeration(hs);
+		while(e.hasMoreElements())
+			System.out.println(e.nextElement());
 	}
 }
-class DemoClass{
-	public <T> void genericsMethod(T data) {
-		System.out.println("Generics Method:");
-		System.out.println("Data Passed: "+data);
-	}
-}
-
