@@ -1,31 +1,26 @@
-package testing.ust;
-
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.junit.jupiter.api.Test;
 
-public class Mockito2 {
+class Mockito2 {
 
-	@Mock
-	List<String> mockList;
-	
-	@Before
-	public void initialize() {
-		MockitoAnnotations.initMocks(this);
-	}
-	
-	
 	@Test
-	public void test() {
+	void test() {
 		//fail("Not yet implemented");
-		when(mockList.get(0)).thenReturn("Rita");
-		assertEquals("Rita",mockList.get(0));
+		List<String> lst=new ArrayList<>();
+		List<String> s=spy(lst);
+		when(s.size()).thenReturn(5);
+		assertEquals(5, s.size());
+		
+		s.add("Lekshmi");
+		s.add("jayanth");
+		assertEquals("Lekshmi", s.get(0));
 	}
 
 }
