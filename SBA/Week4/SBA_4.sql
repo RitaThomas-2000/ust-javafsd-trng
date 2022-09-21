@@ -6,7 +6,7 @@ salary int not null,
 joinig_date varchar(50) not null,
 dep varchar(50) not null);
 
-drop table worker;
+
 
 
 insert into Worker values(001,"Monika","Arora",100000,"02/20/14 9:00:00","HR"),
