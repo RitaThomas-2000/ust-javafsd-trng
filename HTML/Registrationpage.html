@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style >
+	.block {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  background-color: blue;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color:white;
+}
+form{
+
+paddding:20px;
+padding-left: 200px;
+padding-right: 200px;
+}
+
+h1{
+text-align: center;}
+
+.span{
+align-content: right;
+}
+
+</style>
+
+
+
+
+</head>
+<body>
+	<h1>Registration</h1><br>
+	<form name="regform">
+		<div>
+			<table>
+				<tr><td><label>Full Name</label><br>
+				<input type="text"  id="name" placeholder="Please enter your name"  name="fullname" size="40" ><br></td>
+				<td style="padding-left:200px"><label>Position you are applying for</label><br>
+				
+				<select name="position" id="position" style="width:315px;">
+				<option value="" disabled selected hidden>-----Please select-----</option>
+			    <option value="Developer">Developer</option>
+			    <option value="Tester">Tester</option>
+			   
+			  	</select><br></td></tr>
+						
+				
+			</div>
+		
+			<div>
+				<tr><td><br><label>Email</label><br>
+				<input type="text"  id="email" placeholder="Email"  name="email" size="40"></td>
+				<td style="padding-left:200px"><br><label>Phone Number</label><br>
+				<input type="num"  id="num" placeholder="Phone number"  name="phone" size="40"></td></tr>
+			</div>
+			
+			<div>
+				
+				<tr><td><br><label>Country</label><br>
+				<input type="text"  id="country" placeholder="Please enter your country"  name="country" size="40"></td>
+				<td style="padding-left:200px"><br><label>City</label><br>
+				<input type="text"  id="city" placeholder="Please enter your city"  name="city" size="40"></td></tr>
+					
+				
+			</div>
+			
+			<div>
+				<tr><td><br><label>Password</label><br>
+				<input type="password"  id="pwd" placeholder="Please enter your password"  name="pwd" size="40"></td>
+				<td style="padding-left:200px"><br><label>Confirm password</label><br>
+				<input type="password"  id="pwd" placeholder="Please reenter your password"  name="pwd" size="40"></td></tr>
+			</div>
+			</table>
+			<div>
+				<br><label>Gender</label><br>
+				<input type="radio"  id="m"  name="male">Male
+				<input type="radio"  id="f"  name="female">Female
+				<input type="radio"  id="o"  name="other">Other
+				<input type="radio"  id="p"  name="not">Prefer not to say
+			</div>
+		</div>
+		<div>
+			<br><button type="button" class="block" >Next Step <span>&#8594;</span> </button>
+		</div>
+	
+	
+	</form>
+
+</body>
+</html>
