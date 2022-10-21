@@ -1,0 +1,32 @@
+import java.util.*;
+import java.util.Scanner;
+import java.lang.*;
+class HelloWorld {
+    public static void main(String[] args) {
+      int m,n;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter m:");
+      m=sc.nextInt();
+      System.out.println("enter n:");
+      n=sc.nextInt();
+      int A[][]=new int[m][n];
+      int temp;
+      for(int i=0;i<m;i++){
+          for(int j=0;j<n;j++){
+              A[i][j]=sc.nextInt();
+          }
+      }
+      temp=A[0][0];
+      A[0][0]=A[m-1][n-1];
+      A[m-1][n-1]=temp;
+       
+      for(int i=0;i<m;i++){
+          for(int j=0;j<n;j++){
+                System.out.print(A[i][j] +" ");
+              
+          }
+          System.out.print("\n");
+      }
+      
+    }
+}

@@ -1,0 +1,26 @@
+public class Main
+{
+    public static void main(String[] args) {
+        //System.out.println("Hello World");
+        String N[] = {"3.24","5.0","3.01"};
+        String result ="";
+        for(String i:N)
+        {
+            if(i.contains("."))
+            {
+                if(i.contains(".0"))
+                {
+                    if(i.contains(".01"))
+                        result = "NO";
+                    else
+                        result = "YES";
+                }
+                else
+                    result = "NO";
+            }
+            else   
+                result = "NO";
+            System.out.println(result);
+        }
+    }
+}

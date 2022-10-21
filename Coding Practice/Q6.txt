@@ -1,0 +1,16 @@
+import java.util.*;
+import java.util.Scanner;
+import java.lang.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int arr[]={6,2,8,4};
+        int big=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(arr[i-1]>arr[i]){
+                big=arr[i-1];
+            }
+        }
+        System.out.println(big);
+    }
+}
+
