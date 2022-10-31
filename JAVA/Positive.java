@@ -1,6 +1,14 @@
-package com.ust;
+package Abstract.ust;
 
+/**
+ * The type Positive.
+ */
 public class Positive {
+	/**
+	 * Main.
+	 *
+	 * @param args the args
+	 */
 	public static void main(String args[]) {
 		int number=10;
 		if(number>0) {
