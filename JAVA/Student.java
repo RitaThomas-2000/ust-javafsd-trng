@@ -1,40 +1,86 @@
-package com.ust;
-//firstName, billOfThePatient
+import java.util.Objects;
+
+/**
+ * The type Student.
+ */
 public class Student {
-int sID;
-String name;
-int age;
-String course;
-static int count;
-float f=12.45f;
+    /**
+     * The Name.
+     */
+    String name;
+    /**
+     * The Age.
+     */
+    int age, /**
+     * The rollNo.
+     */
+    rollNo;
 
-//public Student() {
-	//constructors don't have return type
-//}
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
 
-{
-	int z=7;  //blocks 
-	System.out.println(z);
-}
+    /**
+     * Gets age.
+     *
+     * @return the age
+     */
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * Gets rollNo.
+     *
+     * @return the rollNo
+     */
+    public int getrollNo() {
+        return rollNo;
+    }
 
 
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return age == student.age && rollNo == student.rollNo && name.equals(student.name);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, rollNo);
+    }
 
-public static void main(String args[]) {
-	int x=5;
-	String str;
-	Student s=new Student();      //default constructor/zero arg constructor
-	Student s1=new Student();
-	Student s2= new Student();
-	s.age=22;
-	System.out.println(s.age);
-	System.out.println(x);
-	s.count=15;
-	s1.age=25;
-	System.out.println(s1.age);
-	System.out.println(s.count);
-	System.out.println(s1.count);
-}
+    /**
+     * Sets age.
+     *
+     * @param age the age
+     */
+    public void setAge(int age) {
+        this.age = age;
+    }
 
+    /**
+     * Sets rollNo.
+     *
+     * @param rollNo the rollNo
+     */
+    public void setrollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
 }
